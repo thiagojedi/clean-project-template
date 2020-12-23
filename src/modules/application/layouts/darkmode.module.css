@@ -1,0 +1,10 @@
+
+.container {
+    --primary-color: #1db954;
+    --secondary-color: #f6f5f4;
+    --background-color: black;
+ 
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
