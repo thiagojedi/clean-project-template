@@ -1,0 +1,3 @@
+.activeButton {
+  border: 4px solid var(--primary-color);
+}
