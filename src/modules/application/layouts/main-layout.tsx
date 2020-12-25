@@ -4,6 +4,8 @@ import { useTheme } from './theme-provider';
 import light from './lightmode.module.css';
 import dark from './darkmode.module.css';
 
+import { SimpleButton } from '../../../lib/components/button/button';
+
 export const MainLayout = (props) => {
   const { theme, setTheme } = useTheme();
 
@@ -11,10 +13,17 @@ export const MainLayout = (props) => {
 
   return (
     <div className={style.container}>
-      <div>
-        Theme: <button onClick={() => setTheme('light')}>Light</button>
-        <button onClick={() => setTheme('dark')}>Dark</button>
-      </div>
+      <header>
+        <div>
+          Theme:{' '}
+          <SimpleButton onClick={() => setTheme('light')}>Light</SimpleButton>
+          <SimpleButton onClick={() => setTheme('dark')}>Dark</SimpleButton>
+        </div>
+        <div>
+          <h1>Hello World!</h1>
+        </div>
+        <hr />
+      </header>
       {props.children}
     </div>
   );
